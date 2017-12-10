@@ -1,7 +1,7 @@
 # Docker Introduction Lab
 Introduction to working with docker
 
-## 1.Installation
+## 1. Installation
 
 ### Install Docker CE
 Docker Community Edidion can easily be installed from the official docker website.
@@ -46,7 +46,7 @@ For more examples and ideas, visit:
 
 If this matches your output, congratulations, docker is up and running!
 
-## 2.Create a custom Dockerfile and run it in a container
+## 2. Run a custom docker image in a container
 This excercise will create a simple executable docker image from a custom made Dockerfile that compiles and runs a java application.
 
 ### Create a simple Hello World java application.
