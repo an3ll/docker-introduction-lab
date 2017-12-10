@@ -9,7 +9,7 @@ Be sure to use the link that matches your operating system.
 
 Docker store: https://store.docker.com/search?type=edition&offering=community
 
-### Test that your Docker installation is up and running
+## 2.Test that your Docker installation is up and running
 A comfortable way to assure that the installation is correct,
 try to run the docker hello-world image by opening the terminal and type:
 
