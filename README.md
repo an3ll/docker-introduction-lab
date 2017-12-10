@@ -90,7 +90,7 @@ docker images list
 Should produce something like this:
 ```bash
 REPOSITORY                          TAG                 IMAGE ID            CREATED             SIZE
-hello-docker                        latest              2bf826fc0bfc        37 hours ago        740 MB
+hello-docker                        latest              3b124e73a8e2        36 hours ago        244 MB
 ```
 This means the 'hello-docker' image is saved in our local docker environment.
 ### Run the image in a container
