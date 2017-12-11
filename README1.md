@@ -1,7 +1,7 @@
 ## 1. Installation
 
 ### Install Docker CE
-Docker Community Edidion can easily be installed from the official docker website.
+Docker Community Edition can easily be installed from the official docker website.
 Be sure to use the link that matches your operating system.
 
 Docker store: https://store.docker.com/search?type=edition&offering=community
