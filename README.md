@@ -103,4 +103,63 @@ If done correctly there should now be an output in the terminal like:
 Hello Docker!
 ```
 
+## 3. Spring boot application in a docker container
+In this exercise we will create a simple spring boot rest application and run it in a container.
 
+### Test the application
+
+* make a git clone of following repository into a new directory: https://github.com/spring-guides/gs-rest-service.git
+* open the project in your IDE and run the springboot application
+* go to localhost:8080/greeting in a browser to try the rest service.
+
+The response should look something like:
+```json
+{
+    id: 1,
+    content: "Hello, World!"
+}
+```
+
+### Build the application
+Open a terminal and go to the projects 'complete' directory
+
+Create a jar-file of the application by running:
+```
+mvn clean package
+```
+Verify that a jar file is located in the 'target' directory
+
+### Create a dockerfile
+Create a new dockerfile called 'Dockerfile' with the content below.
+The 'EXPOSE' command describes that the compiled image should expose its port 8080 to the docker host when running.
+```
+FROM openjdk:8-jdk-slim
+
+EXPOSE 8080
+
+COPY springboot-rest-0.1.0.jar /src/springboot-rest-0.1.0.jar
+
+CMD java -jar /src/springboot-rest-0.1.0.jar
+```
+
+Copy the generated jar-file from the 'target' folder to the same folder as the Dockerfile
+
+Build the Dockerfile by executing:
+```
+docker build -f Dockerfile -t springboot-rest .
+```
+Verify that the image is available in your local docker environment:
+```
+docker images
+```
+```
+REPOSITORY                          TAG                 IMAGE ID            CREATED             SIZE
+springboot-rest                     latest              47e210ed91c9        2 days ago          259 MB
+```
+
+To be able to access the port 8080 in the container from the docker host, we must add the flag '-p' to the docker run command.
+The '-p' flag binds the port inside the docker container to a port on the docker host.
+```
+docker run -p 8080:8080 springboot-rest
+``` 
+Try the rest service again in the browser or from a rest client.
