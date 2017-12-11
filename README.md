@@ -113,7 +113,7 @@ In this exercise we will create a simple spring boot rest application and run it
 * go to localhost:8080/greeting in a browser to try the rest service.
 
 The response should look something like:
-```json
+```
 {
     id: 1,
     content: "Hello, World!"
