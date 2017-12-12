@@ -43,7 +43,43 @@ For more examples and ideas, visit:
 
 If this matches your output, congratulations, docker is up and running!
 
-## 2. Run a custom docker image in a container
+## 2. Run a docker image from docker hub
+
+### Find your image!
+Choose a component from https://hub.docker.com/explore/
+
+Example: https://hub.docker.com/r/webcenter/activemq/
+
+### Run the image in a container
+Run an instance of the image in a container by using the docker client from terminal:
+```
+docker run webcenter/activemq
+```
+
+Try to access the amq web console by going to 
+```
+www.localhost:8161/admin
+```
+
+Nothing happens! Why?
+
+The container does not expose the port 8161 from the container!
+
+Stop the container and restart it with the new argument
+```
+docker run -p 8161:8161 webcenter/activemq
+```
+
+Try to access the amq web console again by going to 
+```
+www.localhost:8161/admin
+```
+Default password is admin/admin
+
+This time the webconsole should be accessible.
+
+
+## 3. Run a custom docker image in a container
 This excercise will create a simple executable docker image from a custom made Dockerfile that compiles and runs a java application.
 
 ### Create a simple Hello World java application.
