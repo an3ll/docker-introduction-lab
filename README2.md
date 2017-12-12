@@ -32,10 +32,29 @@ docker-compose -f my-compose-file.yml up
 3. Create a Dockerfile and build an image.
 
 4. Create a new docker compose file that contains one service based on the image and expose its rest-endpoint on 8080.
-
+```
+version: '3.1'
+services:
+  restapp:
+    image: ${image-name}
+    ports:
+      - 8080:8080
+```
 
 ## 3. Make your own Docker Compose file with multiple services!
 1. Modify the docker compose file so that it contains two services based on the same image and expose their rest-endpoints on different ports on the docker host.
 
-2. Run the container with docker-compose and try to access both rest-endpoints.
+```
+version: '3.1'
+services:
+  restapp1:
+    image: ${image-name}
+    ports:
+      - 8080:8080
+  restapp2:
+    image: ${image-name}
+    ports:
+      - 8081:8080
+```
 
+2. Run the container with docker-compose and try to access both rest-endpoints.
