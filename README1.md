@@ -195,5 +195,5 @@ To be able to access the port 8080 in the container from the docker host, we mus
 The '-p' flag binds the port inside the docker container to a port on the docker host.
 ```
 docker run -p 8080:8080 springboot-rest
-``` 
+```
 Try the rest service again in the browser or from a rest client.
