@@ -46,7 +46,8 @@ If this matches your output, congratulations, docker is up and running!
 ## 2. Run a docker image from docker hub
 
 ### Find your image!
-Choose a component from https://hub.docker.com/explore/
+In this lab we will run an instance of activemq i a docker container.
+Browse and search for activemq from docker hub - https://hub.docker.com/explore/
 
 Example: https://hub.docker.com/r/webcenter/activemq/
 
@@ -63,7 +64,7 @@ www.localhost:8161/admin
 
 Nothing happens! Why?
 
-The container does not expose the port 8161 from the container!
+The container does not expose the port 8161 from the container to the docker host!
 
 Stop the container and restart it with the new argument
 ```
