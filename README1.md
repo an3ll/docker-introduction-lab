@@ -197,4 +197,3 @@ The '-p' flag binds the port inside the docker container to a port on the docker
 docker run -p 8080:8080 springboot-rest
 ``` 
 Try the rest service again in the browser or from a rest client.
-
