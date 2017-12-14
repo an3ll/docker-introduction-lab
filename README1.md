@@ -119,7 +119,7 @@ docker build -f Dockerfile -t hello-docker .
 ```
 * Make sure you see the created Docker image by executing:
 ```bash
-docker images list
+docker images
 ```
 Should produce something like this:
 ```bash
