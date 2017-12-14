@@ -59,7 +59,7 @@ docker run webcenter/activemq
 
 Try to access the amq web console by going to 
 ```
-www.localhost:8161/admin
+localhost:8161/admin
 ```
 
 Nothing happens! Why?
