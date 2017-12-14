@@ -171,9 +171,9 @@ FROM openjdk:8-jdk-slim
 
 EXPOSE 8080
 
-COPY springboot-rest-0.1.0.jar /src/springboot-rest-0.1.0.jar
+COPY gs-rest-service-0.1.0.jar /src/gs-rest-service-0.1.0.jar
 
-CMD java -jar /src/springboot-rest-0.1.0.jar
+CMD java -jar /src/gs-rest-service-0.1.0.jar
 ```
 
 Copy the generated jar-file from the 'target' folder to the same folder as the Dockerfile
