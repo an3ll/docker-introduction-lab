@@ -73,7 +73,7 @@ docker run -p 8161:8161 webcenter/activemq
 
 Try to access the amq web console again by going to 
 ```
-www.localhost:8161/admin
+localhost:8161/admin
 ```
 Default password is admin/admin
 
