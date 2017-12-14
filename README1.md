@@ -11,7 +11,7 @@ A comfortable way to assure that the installation is correct,
 try to run the docker hello-world image by opening the terminal and type:
 
 ```bash
-docker run hello-word
+docker run hello-world
 ```
 
 This will pull the hello-world image from docker-hub repo and run it in a container in 
